@@ -36,7 +36,7 @@ The characteristics that define a RESTFUL API are:
 * Statelessness - each request sent will have all the necessary information for the server to process it, client information not stored between requests
 * Cacheability - responds can be cached to improve performance
 * Uniform Interface - separates the client from the server's implementation (allows for scalability, flexibility, security)
-* Layered System - ach layer has a specific function and does not know about the internal workings of other layers
+* Layered System - each layer has a specific function and does not know about the internal workings of other layers
 
 ## HTTP
 
@@ -47,6 +47,28 @@ HTTP is a protocol that defines how web browsers and servers communicate with ea
 Used to transfer data over the web and is the ultimate foundation of the web.
 
 ## HTTP request and response structure
+
+![Request Structure](HTTP_request.png "Request Structure")
+
+HTTP request is a message that a client sends to a server to request information.
+The HTTP request usually consists of a request line, headers, and a message body.
+
+As we can see in the diagram the verb, url and version make up this thing called the **request line**
+
+**Headers** have additional data about the request, these vary from content type to authentication credentials.
+
+The **message body** has data that client wants to send to the server, varies from JSON payload to binary data.
+Once server gets the request, it processes it and sends a response back to client with the requested infromation.
+
+
+![Response Structure](HTTP_response.png "Response Structure")
+
+HTTP response is message that server sends to client in response to HTTP request.
+HTTP Request consists of response line(as we can see in the diagram), headers, and message body.
+
+**Response line** consists of response code and version. **Response code** shows if request was successful or if an error was encountered.
+**Headers** have the data about the response varying from content type, server name and cache settings. 
+**Message body** has the requested data eg: web page.
 
 
 
